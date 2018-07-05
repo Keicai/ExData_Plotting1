@@ -19,4 +19,3 @@ plot(x = data$Datetime, y = data$Global_active_power, type = 'l', xlab = "", yla
 dev.copy(png,"plot2.png", width=480, height=480)
 dev.off()
 
-

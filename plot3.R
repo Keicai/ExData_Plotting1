@@ -26,4 +26,3 @@ legend("topright", names(data[7:9]), col = plot_col, lty = 1, cex = 0.8)
 dev.copy(png,"plot3.png", width=480, height=480)
 dev.off()
 
-
