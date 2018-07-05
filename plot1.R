@@ -13,6 +13,5 @@ hist(data$Global_active_power, col = "red", xlab ="Global Active Power (kilowatt
 
 ## output data to png
 
-png(filename = "plot1.png")
-hist(data$Global_active_power, col = "red", xlab ="Global Active Power (kilowatts)", ylab = "Frequency", main = "Global Active Power")
+dev.copy(png,"plot1.png", width=480, height=480)
 dev.off()

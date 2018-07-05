@@ -23,13 +23,7 @@ legend("topright", names(data[7:9]), col = plot_col, lty = 1, cex = 0.8)
 
 ## output data to png
 
-png(filename = "plot3.png")
-
-plot(data$Datetime, data$Sub_metering_1, type = 'l', col = plot_col[1], xlab ="", ylab ="Energy sub metering")
-lines(data$Datetime, data$Sub_metering_2, type = 'l', col = plot_col[2])
-lines(data$Datetime, data$Sub_metering_3, type = 'l', col = plot_col[3])
-legend("topright", names(data[7:9]), col = plot_col, lty = 1, cex = 0.8)
-
+dev.copy(png,"plot3.png", width=480, height=480)
 dev.off()
 
 

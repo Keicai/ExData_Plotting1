@@ -29,16 +29,5 @@ plot(x = data$Datetime, y = data$Global_reactive_power, type = 'l', xlab = "date
 
 ## output png
 
-png(filename = "plot4.png")
-
-par(mfrow = c(2,2))
-
-plot(x = data$Datetime, y = data$Global_active_power, type = 'l', xlab = "", ylab = "Global Active Power (kilowatts)")
-plot(x = data$Datetime, y = data$Voltage, type = 'l', xlab = "datetime", ylab = "Voltage")
-plot(data$Datetime, data$Sub_metering_1, type = 'l', col = plot_col[1], xlab ="", ylab ="Energy sub metering")
-lines(data$Datetime, data$Sub_metering_2, type = 'l', col = plot_col[2])
-lines(data$Datetime, data$Sub_metering_3, type = 'l', col = plot_col[3])
-legend("topright", names(data[7:9]), col = plot_col, lty = 1, cex = 0.5, bty = "n")
-plot(x = data$Datetime, y = data$Global_reactive_power, type = 'l', xlab = "datetime", ylab = "Global_reactive_power")        
-
+dev.copy(png,"plot4.png", width=600, height=480)
 dev.off()
